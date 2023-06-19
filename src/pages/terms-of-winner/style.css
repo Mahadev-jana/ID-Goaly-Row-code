@@ -1,0 +1,14 @@
+.text1 {
+    font-size: 16px;
+    margin: 35px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+span{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+div{
+    padding: 3px;
+}
