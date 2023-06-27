@@ -12,7 +12,7 @@ const index = () => {
   //     alert("Debugging flag is " + q);
   // },[])
 
-  return <div>version 2.3.7</div>;
+  return <div>version 2.3.8</div>;
 };
 
 

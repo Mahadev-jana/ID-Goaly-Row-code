@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter,useHistory } from 'react-router-dom';
 import Loader from "react-loader-spinner";
 import axios from '../../_config/axios';
 import { setUserDetails,setJWT } from '../../_helper/authentication';
@@ -8,6 +8,7 @@ import GoalyWhiteLogo from '../../assetsStaging/img/goaly_logo_white.png';
 import './index.css';
 
 const Login = (props) => {
+    const history = useHistory();
     const [phoneNo,setPhoneNo] = useState('');
     // const [password,setPassword] = useState('');
     const [errPh,setErrPh]= useState(false);
@@ -68,7 +69,9 @@ const Login = (props) => {
                 if (res.data.success == 1 && res.data.error == 0 && res.data.status==200) {
                     setUserDetails(res.data.data.user_details);
                     setJWT(res.data.data.JWT);
-                    props.history.push('/')
+                    // props.history.push('/')
+                    setTimeout(() => {props.history.goBack() },100)
+                    
                 }
             })
         }

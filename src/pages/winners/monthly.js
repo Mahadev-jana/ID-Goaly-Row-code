@@ -37,13 +37,13 @@ const Monthly = React.memo(({ scoreList, monthlyPrize, loading }) => {
     })
     const topScoreList = sortedScoreList.slice(0, monthlyPrize?.length)
     console.log(topScoreList)
-    var mergeScorelistWithmonthlyPrize;
-    if (topScoreList.length === 0) {
-        mergeScorelistWithmonthlyPrize = Object.assign(topScoreList, monthlyPrize)
-    }
-    else {
-        mergeScorelistWithmonthlyPrize = topScoreList.map((item, i) => Object.assign({}, item, monthlyPrize[i]))
-    }
+    // var mergeScorelistWithmonthlyPrize;
+    // if (topScoreList.length === 0) {
+    //     mergeScorelistWithmonthlyPrize = Object.assign(topScoreList, monthlyPrize)
+    // }
+    // else {
+    //     mergeScorelistWithmonthlyPrize = topScoreList.map((item, i) => Object.assign({}, item, monthlyPrize[i]))
+    // }
 
     return (
 
@@ -51,7 +51,7 @@ const Monthly = React.memo(({ scoreList, monthlyPrize, loading }) => {
             {scoreList.length === 0 ?
                 <div>
 
-                    {!!mergeScorelistWithmonthlyPrize && mergeScorelistWithmonthlyPrize.map((data, key) => {
+                    {!!monthlyPrize && monthlyPrize.map((data, key) => {
                         return <div>
                             <div class="winner">
                                 <div class="cover-image">
@@ -82,7 +82,7 @@ const Monthly = React.memo(({ scoreList, monthlyPrize, loading }) => {
                 </div> :
                 <div>
 
-                    {!!this.state.mergeScorelistWithmonthlyPrize && this.state.mergeScorelistWithmonthlyPrize.map((details, key) => {
+                    {!!topScoreList && topScoreList.map((details, key) => {
 
                         return <>
                             {console.log(scoreList.length)}
@@ -129,7 +129,7 @@ const Monthly = React.memo(({ scoreList, monthlyPrize, loading }) => {
                         </>
                     })
                     }
-                    {!!this.state.mergeScorelistWithmonthlyPrize && this.state.mergeScorelistWithmonthlyPrize.slice(scoreList.length, this.state.mergeScorelistWithmonthlyPrize.length).map((data, key) => {
+                    {!!monthlyPrize &&monthlyPrize.slice(topScoreList.length, monthlyPrize.length).map((data, key) => {
                         return <div>
                             <div class="winner">
                                 <div class="cover-image">

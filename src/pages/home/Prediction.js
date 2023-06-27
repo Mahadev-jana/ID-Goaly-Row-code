@@ -88,4 +88,4 @@ export default Prediction;
 //                         ))}
 //                     </Swiper>}
 //                 </Col>
-//             </Row>
+//             </Row>0.
