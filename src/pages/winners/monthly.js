@@ -115,13 +115,11 @@ const Monthly = React.memo(({ scoreList, monthlyPrize, loading }) => {
                                         </div>
                                         <div class="detail-column">
                                             <div class="icon"><img src={coins} alt="" class="mr-2" /></div>
-                                            <span>{details.coins} Points</span>
+                                            <span>{details.points} Points</span>
                                         </div>
                                         <div class="detail-column" style={{ margin: "0 auto" }}>
                                             <div class="icon"><img src={clock} alt="" class="mr-2" /></div>
-                                            <span style={{
-                                                fontSize: '14px'
-                                            }}>{details.start_date} - {details.end_date}</span>
+                                            <span>{details.start_date} - {details.end_date}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -147,9 +145,7 @@ const Monthly = React.memo(({ scoreList, monthlyPrize, loading }) => {
 
                                         <div class="detail-column">
                                             <div class="icon"><img src={clock} alt="" class="mr-2" /></div>
-                                            <span style={{
-                                                fontSize: '14px'
-                                            }}>{data.start_date} - {data.end_date}</span>
+                                            <span>{data.start_date} - {data.end_date}</span>
                                         </div>
                                     </div>
                                 </div>

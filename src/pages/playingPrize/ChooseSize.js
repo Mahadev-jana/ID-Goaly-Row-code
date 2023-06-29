@@ -90,7 +90,7 @@ const ChooseSize = ({
 
               <div
                 id="redeem2"
-                class="content fade active dstepper-block"
+                class=""
                 role="tabpanel"
               >
                 <div className="form-group prize-menu">

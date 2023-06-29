@@ -574,7 +574,7 @@ h3.post-title {
   position: relative;
   border-radius: 100%;
   border: 2px solid #F8F8F8;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  
 }
 .avatar-upload .avatar-preview > div {
   width: 100%;
@@ -2598,8 +2598,8 @@ h3.post-title {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 .avatar-upload .avatar-preview > div {
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   border-radius: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2640,7 +2640,7 @@ a.chk2 {
 	border: 0;
 }
 a.cts {
-	font-size: 11px;
+	font-size: 10px;
 	background: aqua;
 	color: #212121;
 	border: 0;

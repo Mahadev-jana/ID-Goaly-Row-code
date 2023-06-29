@@ -22,10 +22,10 @@
 a {
   text-decoration: none !important;
 }
-.text-center{
+
+.text-center {
   text-align: center;
 }
-
 .text-justify {
   text-align: justify;
 }
@@ -561,4 +561,7 @@ a {
   95%, 100% {
     transform: scale(1) rotate(360deg);
   }
+}
+.bs-stepper-circle{
+  font-size: 10px;
 }

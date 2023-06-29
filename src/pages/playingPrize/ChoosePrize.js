@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import { RadioGroup, RadioButton } from "react-radio-buttons";
 
-import "./prize.css";
+import "./prize.css"
 
 const ChoosePrize = ({
   nextTab,
@@ -12,7 +12,7 @@ const ChoosePrize = ({
   monthlyPrize,
   weeklyPrizeStatus,
   monthlyPrizeStatus,
- 
+
 
 }) => {
   console.log(weeklyPrizeStatus, weeklyPrize);
@@ -87,8 +87,8 @@ const ChoosePrize = ({
   // {
   //  console.log(redeemStatus);
   // }
-  
-  
+
+
   const categoryOptions = [
     { value: "weekly", label: "Weekly" },
     { value: "monthly", label: "Monthly" },
@@ -149,7 +149,7 @@ const ChoosePrize = ({
           <div class="bs-stepper-content mt-2">
             <div
               id="redeem1"
-              class="content fade active dstepper-block"
+              class=""
               role="tabpanel"
             >
               <div class="form-group">
@@ -162,7 +162,7 @@ const ChoosePrize = ({
                                 </div> */}
                 <>
                   <div className="select-category">
-                    <div className="input-section">
+                    {/* <div className="input-section">
                       <input
                         type="radio"
                         value="weekly"
@@ -170,7 +170,7 @@ const ChoosePrize = ({
                         onChange={handleCategoryChange}
                       />
                       <label>Weekly</label>
-                    </div>
+                    </div> */}
                     <div className="input-section">
                       <input
                         type="radio"
@@ -203,12 +203,12 @@ const ChoosePrize = ({
                   weeklyPrizeStatus === false && (
                     <div className="no-prize-message">You have not won any weekly prize yet.</div>
                   )}
-                  {selectedCategoryOption === "weekly" &&
+                {selectedCategoryOption === "weekly" &&
                   weeklyPrizeStatus === "pending" && (
                     <div className="no-prize-message">You have already redeemed your prize.</div>
                   )}
                 {selectedCategoryOption === "monthly" &&
-                  monthlyPrizeStatus === true &&  (
+                  monthlyPrizeStatus === true && (
                     <div className="prize-menu">
                       <p className="choose-category">Select monthly prize</p>
                       {/* <select id="" defaultValue="" onChange={() => console.log("changed")}>
@@ -236,12 +236,13 @@ const ChoosePrize = ({
                   monthlyPrizeStatus === false && (
                     <div className="no-prize-message">You have not won any monthly prize yet.</div>
                   )}
-                   {selectedCategoryOption === "monthly" &&
+                { }
+                {selectedCategoryOption === "monthly" &&
                   monthlyPrizeStatus === "redeemed" && (
                     <div className="no-prize-message">You have already redeemed your prize.</div>
                   )}
               </div>
-              <button
+              <button  disabled={ monthlyPrizeStatus === "redeemed" ? true :false}
                 onClick={nextTab}
                 type="button"
                 class="btn bg-green p-1 w-100 my-2 text-white shadow"

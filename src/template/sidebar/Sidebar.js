@@ -128,7 +128,7 @@ const Sidebar = ({ open, closeSideBar }) => {
 								<li><NavLink to="/leaderboard" onClick={closeSideBar}><img src={leaderboard} alt="" /> Leaderboard</NavLink></li>
 								<li><NavLink to="/winner" onClick={closeSideBar}><img src={winners} alt="" />Winners</NavLink></li>
 								<li><NavLink to="/language" onClick={closeSideBar}><img src={Language} alt="" /> Language <span id="language">{language[selectedLanguage()]}</span></NavLink></li>
-								{/* <li><NavLink to="/claim-prize" onClick={closeSideBar}><img src={claimprize} alt="" />Claim Prize</NavLink></li> */}
+								<li><NavLink to="/claim-prize" onClick={closeSideBar}><img src={claimprize} alt="" />Claim Prize</NavLink></li>
 								<li><NavLink to="/faq" onClick={closeSideBar}><img src={faq} alt="" /> FAQ</NavLink></li>
 								<li><NavLink to="/privacy" onClick={closeSideBar}><img src={privacypolicy} alt="" />Privacy policy</NavLink></li>
 								<li><NavLink to="/service" onClick={closeSideBar}><img src={term} alt="" />Terms of Service</NavLink></li>

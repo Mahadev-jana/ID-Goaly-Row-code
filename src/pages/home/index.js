@@ -71,6 +71,18 @@ class Home extends Component {
         if (isAuthenticate())
             // this.getMyTeams();
             this.getLatestNews();
+
+           // Updated Redeemed prize and winnerDetails 29/06/23
+           
+                post('api/getWinnerBoard')
+                .then(res => {
+                  console.log(res)
+                
+                    // console.log(this.state.monthlyPrizeList)
+                })
+            
+        
+
     }
     getMyTeams = (page = 0) => {
         const payload = new FormData();

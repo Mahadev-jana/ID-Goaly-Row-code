@@ -66,7 +66,7 @@ const WinnerDetails = (props) => {
         <>
             <div class="text-center">
                 <h4 class="mt-2 mb-2"><strong>Redeem Prize</strong></h4> </div>
-            <div id="redeem3" class="content" role="tabpanel">
+            <div id="redeem3" class="content" role="tabpanel" style={{borderRight:"none"}}>
                 <div class="bs-stepper linear">
                     <div class="bs-stepper-header" role="tablist">
                         <div class="step" data-target="#redeem1">
